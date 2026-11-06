@@ -1,0 +1,16 @@
+{
+  "name": "campeonato-agus",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Campeonato Agus de truco: inscripción, equipos de 3, fase de grupos y llave.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test"
+  },
+  "engines": { "node": ">=20" },
+  "dependencies": {
+    "better-sqlite3": "11.8.1",
+    "express": "4.21.2"
+  }
+}

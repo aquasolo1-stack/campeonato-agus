@@ -1,0 +1,14 @@
+services:
+  app:
+    build: .
+    container_name: campeonato-agus
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      ADMIN_PIN: ${ADMIN_PIN:?Definí ADMIN_PIN en el archivo .env}
+    volumes:
+      - campeonato-data:/data
+
+volumes:
+  campeonato-data:
