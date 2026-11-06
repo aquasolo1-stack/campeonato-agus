@@ -581,7 +581,7 @@ function render(){
 function renderAdmin(){
   const b=document.getElementById('adminbox'); if(!b) return;
   if(S.owner) b.innerHTML='<span class="msg">Estás como organizador.</span> <button class="ghost small" onclick="CA.logout()">Salir</button>';
-  else if(S.showLogin) b.innerHTML='<form class="row" onsubmit="event.preventDefault();CA.login()"><input type="password" id="in-pin" placeholder="PIN del organizador" inputmode="numeric" style="font:inherit;font-size:16px;padding:8px 10px;border-radius:8px;border:1px solid var(--line);background:var(--surface2);color:var(--ink);width:180px"><button type="submit" class="ghost small">Entrar</button></form>';
+  else if(S.showLogin) b.innerHTML='<form class="row" onsubmit="event.preventDefault();CA.login()"><input type="password" id="in-pin" placeholder="PIN del organizador" autocapitalize="off" autocomplete="off" style="font:inherit;font-size:16px;padding:8px 10px;border-radius:8px;border:1px solid var(--line);background:var(--surface2);color:var(--ink);width:180px"><button type="submit" class="ghost small">Entrar</button></form>';
   else b.innerHTML='<button class="ghost small" onclick="CA._showLogin()">Soy el organizador</button>';
 }
 A._showLogin=()=>{ S.showLogin=true; renderAdmin(); document.getElementById('in-pin')?.focus(); };
